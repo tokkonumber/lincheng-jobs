@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>聯成電腦 暫時性職缺</title>
+<meta name="description" content="聯成電腦暫時性職缺：食品、生技醫材、機場貴賓室、空廚、冷氣組裝、汽車零件、物流與科學園區等 9 則職缺。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Inter:wght@400;500;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#ECEDEF; --paper:#F7F7F8; --soft:#F1F2F4; --ink:#1B2232; --ink2:#4C566B; --mute:#8A92A3; --line:#DCDFE5;
+  --pri:#1F5FBF; --pri-soft:#E2EAF6; --pri-deep:#13336B;
+  --acc:#E8792B; --acc-soft:#FBEADD; --mint:#1E8C86; --mint-soft:#DDEFEE;
+  --dark:#101A2E; --dark2:#16233D;
+  --r:18px; --shadow:0 1px 2px rgba(27,34,50,.04),0 8px 22px rgba(27,34,50,.07);
+  --en:"Inter","Noto Sans TC",system-ui,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Consolas,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{color-scheme:light;scroll-behavior:smooth;scroll-padding-top:72px}
+body{font-family:"Noto Sans TC","Inter",system-ui,-apple-system,"Microsoft JhengHei",sans-serif;background:var(--bg);color:var(--ink);line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+.num{font-family:var(--en);font-variant-numeric:tabular-nums}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:50;background:rgba(236,237,239,.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);transition:transform .3s}
+.nav.hide{transform:translateY(-100%)}
+.nav .wrap{display:flex;align-items:center;gap:20px;height:60px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:15px;white-space:nowrap;text-decoration:none}
+.brand i{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:9px;background:var(--pri);color:#fff;font-style:normal;font-family:var(--en);font-size:11px;font-weight:800}
+.nav ul{display:flex;gap:4px;list-style:none;margin-left:auto;overflow-x:auto;scrollbar-width:none}
+.nav ul::-webkit-scrollbar{display:none}
+.nav ul a{display:block;padding:6px 12px;border-radius:999px;font-size:14px;color:var(--ink2);text-decoration:none;white-space:nowrap}
+.nav ul a:hover,.nav ul a.active{background:var(--pri-soft);color:var(--pri)}
+.nav .call{flex:none;padding:7px 14px;border-radius:999px;background:var(--acc);color:#fff;font-weight:700;font-size:14px;text-decoration:none}
+.progress{position:fixed;top:0;left:0;right:0;height:3px;background:var(--acc);transform-origin:0 50%;transform:scaleX(0);z-index:60}
+
+/* hero */
+.hero{padding:56px 0 44px}
+.hero .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:center}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;color:var(--pri);background:var(--pri-soft);padding:6px 12px;border-radius:999px;margin-bottom:18px}
+.eyebrow b{width:6px;height:6px;border-radius:50%;background:var(--pri);box-shadow:0 0 0 4px rgba(31,95,191,.18)}
+h1{font-size:clamp(34px,5.2vw,58px);line-height:1.18;font-weight:900;letter-spacing:-.5px;margin:0 0 8px}
+h1 em{font-style:normal;color:var(--acc)}
+h1 .sub{display:block;font-size:.46em;font-weight:700;color:var(--ink2);margin-top:12px;letter-spacing:0}
+h1 .ch{display:inline-block;opacity:0;transform:translateY(.4em);animation:chIn .6s cubic-bezier(.2,.7,.2,1) forwards;animation-delay:calc(var(--i)*35ms)}
+@keyframes chIn{to{opacity:1;transform:none}}
+.lead{font-size:18px;color:var(--ink2);max-width:36em;margin:14px 0 26px}
+.tools-inline{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px}
+.chip{font-size:13px;font-weight:500;padding:5px 12px;border-radius:999px;background:var(--paper);border:1px solid var(--line);color:var(--ink2)}
+.chip.k{background:var(--dark);color:#fff;border-color:var(--dark)}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 22px;border-radius:12px;font-weight:700;font-size:15px;text-decoration:none;border:1px solid transparent;cursor:pointer;font-family:inherit;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-1px)}
+.btn.p{background:var(--acc);color:#fff;box-shadow:0 6px 18px rgba(232,121,43,.28)}
+.btn.b{background:var(--pri);color:#fff;box-shadow:0 6px 18px rgba(31,95,191,.25)}
+.btn.g{background:var(--paper);border-color:var(--line);color:var(--ink)}
+.hero-card{background:var(--paper);border-radius:24px;box-shadow:var(--shadow);overflow:hidden;border:1px solid var(--line);transition:transform .2s}
+.hero-card .poster{position:relative;aspect-ratio:16/10;overflow:hidden;background:linear-gradient(135deg,var(--pri-deep),var(--pri));display:flex;flex-direction:column;justify-content:flex-end;padding:22px;color:#fff}
+.hero-card .poster .badges{position:absolute;left:14px;top:14px;display:flex;gap:6px}
+.hero-card .poster .badges span{font-size:12px;font-weight:700;padding:4px 10px;border-radius:999px;background:var(--acc);color:#fff}
+.hero-card .poster .badges span+span{background:rgba(255,255,255,.92);color:var(--pri-deep)}
+.hero-card .poster strong{font-family:var(--en);font-size:46px;font-weight:800;line-height:1}
+.hero-card .poster small{font-size:14px;color:#D9E5F5}
+.facts{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line)}
+.facts div{padding:14px 18px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.facts div:nth-child(2n){border-right:0}
+.facts div:nth-last-child(-n+2){border-bottom:0}
+.facts small{display:block;font-size:12px;color:var(--mute)}
+.facts strong{font-size:17px}
+.countdown{display:flex;align-items:center;justify-content:space-between;padding:12px 18px;background:var(--dark);color:#fff}
+.countdown small{color:#AEB9D0}
+.countdown .n{font-size:20px;font-weight:800;color:#FFB27A}
+
+/* marquee */
+.marquee{overflow:hidden;background:var(--dark);color:#fff;padding:14px 0;white-space:nowrap}
+.marquee .track{display:inline-flex;animation:mq 40s linear infinite}
+.marquee span{font-size:15px;font-weight:700;padding:0 6px}
+.marquee em{font-style:normal;color:#FFB27A}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* sections */
+section{padding:84px 0}
+section.alt{background:var(--soft)}
+.sh{max-width:720px;margin-bottom:40px}
+.kicker{font-family:var(--en);font-size:13px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--acc);margin-bottom:8px}
+h2{font-size:clamp(26px,3.4vw,38px);line-height:1.3;font-weight:900;letter-spacing:-.3px;margin-bottom:12px}
+.sh p{font-size:17px;color:var(--ink2)}
+h3{font-size:19px;font-weight:700;line-height:1.45}
+.grid{display:grid;gap:18px}
+.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:24px;box-shadow:var(--shadow)}
+.card p{color:var(--ink2);font-size:15px;margin-top:6px}
+.note{font-size:13px;color:var(--mute);margin-top:16px}
+
+/* tabs */
+.tabs{display:inline-flex;gap:4px;padding:4px;border-radius:14px;background:var(--paper);border:1px solid var(--line);margin-bottom:24px;flex-wrap:wrap}
+.tabs button{border:0;background:none;font:inherit;font-weight:700;font-size:14px;padding:9px 16px;border-radius:10px;color:var(--ink2);cursor:pointer}
+.tabs button.on{background:var(--dark);color:#fff}
+
+/* jobs */
+.jobs .card{position:relative;padding-top:28px;display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s}
+.jobs .card:hover{transform:translateY(-3px);box-shadow:0 10px 26px rgba(27,34,50,.1)}
+.jobs .cat{font-size:13px;font-weight:700;color:var(--mint);margin-bottom:6px}
+.jobs .pay{font-family:var(--en);font-size:28px;font-weight:800;color:var(--acc);line-height:1.2;margin-top:4px}
+.jobs .pay small{font-family:"Noto Sans TC",sans-serif;font-size:13px;color:var(--mute);font-weight:500;margin-right:4px}
+.jobs h3{font-size:20px;margin-bottom:4px}
+.jobs .co{font-size:14px;color:var(--ink2);margin-bottom:6px}
+.jobs ul{list-style:none;margin-top:14px;display:grid;gap:6px;font-size:14px;color:var(--ink2)}
+.jobs li{display:flex;gap:8px}
+.jobs li::before{content:"✓";color:var(--mint);font-weight:800}
+.jobs .loc{display:inline-block;margin-top:14px;font-size:12px;color:var(--pri);background:var(--pri-soft);padding:2px 8px;border-radius:6px;align-self:flex-start}
+.jobs .apply{margin-top:auto}
+.jobs .apply a{display:block;text-align:center;background:var(--dark);color:#fff;padding:10px;border-radius:10px;font-weight:700;text-decoration:none;margin-top:16px}
+.jobs .apply a:hover{background:var(--pri)}
+.hidden{display:none!important}
+
+/* benefits */
+.benefits-grid .card i{display:inline-grid;place-items:center;width:44px;height:44px;border-radius:13px;background:var(--pri-soft);color:var(--pri);font-style:normal;font-family:var(--en);font-weight:800;margin-bottom:12px}
+
+/* process */
+.journey{display:grid;grid-template-columns:repeat(3,1fr);position:relative;list-style:none}
+.journey li{list-style:none;position:relative;padding:0 10px;text-align:center}
+.journey li::before{content:"";position:absolute;top:27px;left:-50%;right:50%;height:3px;background:var(--line);z-index:0}
+.journey li:first-child::before{display:none}
+.journey .dot{position:relative;z-index:1;display:grid;place-items:center;width:56px;height:56px;margin:0 auto 12px;border-radius:16px;background:var(--pri);color:#fff;font-family:var(--en);font-weight:800;font-size:20px;box-shadow:0 8px 18px rgba(31,95,191,.25)}
+.journey li:nth-child(2) .dot{background:var(--acc);box-shadow:0 8px 18px rgba(232,121,43,.3)}
+.journey li:nth-child(3) .dot{background:var(--dark)}
+.journey h3{font-size:17px}
+.journey p{font-size:14px;color:var(--ink2)}
+
+/* FAQ */
+.faq details{background:var(--paper);border:1px solid var(--line);border-radius:14px;margin-bottom:10px;overflow:hidden}
+.faq summary{cursor:pointer;list-style:none;padding:16px 20px;font-weight:700;display:flex;justify-content:space-between;gap:12px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"＋";color:var(--pri);font-weight:800}
+.faq details[open] summary::after{content:"－"}
+.faq details p{padding:0 20px 18px;color:var(--ink2);font-size:15px}
+
+/* apply block */
+.signup{display:grid;grid-template-columns:1fr 1fr;gap:36px;background:var(--dark);color:#fff;border-radius:28px;padding:44px;box-shadow:0 20px 50px rgba(16,26,46,.25)}
+.signup h2{color:#fff}
+.signup p{color:#C3CBDB}
+.signup .info{display:grid;gap:0;background:var(--dark2);border-radius:18px;padding:6px 20px}
+.signup .info div{display:grid;grid-template-columns:86px 1fr;gap:12px;padding:12px 0;border-bottom:1px solid #26365A;font-size:15px}
+.signup .info div:last-child{border-bottom:0}
+.signup .info small{color:#8C9AB8;font-size:13px;padding-top:2px}
+.contact{display:grid;gap:12px;margin-top:24px;background:#fff;color:var(--ink);border-radius:18px;padding:16px}
+.contact b{display:block;font-size:17px}
+.contact p{color:var(--ink2);font-size:14px;margin:2px 0 6px}
+.contact .row{display:flex;flex-wrap:wrap;gap:8px}
+.contact .row a{display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border-radius:10px;font-weight:700;font-size:14px;text-decoration:none}
+.contact .line{background:#06C755;color:#fff}
+.contact .tel{background:var(--pri-soft);color:var(--pri)}
+.rule{margin-top:16px;font-size:13px;color:#AEB9D0;background:var(--dark2);border-radius:12px;padding:12px 14px}
+.rule b{color:#FFB27A}
+
+footer{padding:36px 0 110px;text-align:center;font-size:13px;color:var(--mute)}
+
+/* floating */
+.jump,.fab{display:inline-flex;align-items:center;gap:6px;border:0;cursor:pointer;font:inherit;font-weight:700;box-shadow:0 8px 22px rgba(16,26,46,.2)}
+.jump{position:fixed;right:18px;bottom:84px;z-index:40;padding:10px 12px;border-radius:12px;background:var(--paper);color:var(--ink);font-size:13px;border:1px solid var(--line)}
+.jump svg{width:16px;height:16px}
+.fab{position:fixed;right:18px;bottom:22px;z-index:40;padding:13px 18px;border-radius:14px;background:var(--acc);color:#fff;font-size:15px}
+.drawer{position:fixed;inset:0;z-index:80;visibility:hidden}
+.drawer .bg{position:absolute;inset:0;background:rgba(16,26,46,.45);opacity:0;transition:opacity .25s}
+.drawer .panel{position:absolute;right:0;top:0;bottom:0;width:min(440px,100%);background:var(--paper);padding:32px 28px;overflow-y:auto;transform:translateX(100%);transition:transform .3s cubic-bezier(.2,.7,.2,1)}
+.drawer.on{visibility:visible}
+.drawer.on .bg{opacity:1}
+.drawer.on .panel{transform:none}
+.drawer .x{position:absolute;right:16px;top:14px;border:0;background:var(--soft);width:36px;height:36px;border-radius:10px;font-size:20px;cursor:pointer}
+.drawer h3{font-size:22px;margin-bottom:14px}
+.drawer .pitch{background:var(--pri-soft);border-radius:14px;padding:16px;font-size:15px;margin-bottom:20px}
+.drawer ol{padding-left:20px;display:grid;gap:8px;font-size:15px;margin-bottom:20px}
+.drawer .btn{width:100%;margin-top:12px}
+
+/* motion */
+.js-anim .rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0ms)}
+.js-anim .rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.marquee .track{animation:none}}
+
+@media (max-width:980px){
+  .hero .wrap,.signup{grid-template-columns:1fr}
+  .g4{grid-template-columns:repeat(2,1fr)}
+  .g3{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:640px){
+  .wrap{padding:0 16px}
+  section{padding:60px 0}
+  .nav ul{display:none}
+  .nav .call{margin-left:auto}
+  .hero{padding:32px 0}
+  .lead{font-size:16px}
+  .g3,.g4{grid-template-columns:1fr}
+  .journey{grid-template-columns:1fr;gap:12px}
+  .journey li{display:grid;grid-template-columns:56px 1fr;gap:4px 14px;text-align:left;padding:0}
+  .journey li::before{display:none}
+  .journey .dot{grid-row:span 2;margin:0}
+  .signup{padding:22px}
+  .signup .info div{grid-template-columns:72px 1fr}
+  .fab{right:12px;bottom:14px;padding:11px 14px;font-size:14px}
+  .jump{right:12px;bottom:70px}
+}
+</style>
+</head>
+<body>
+
+<div class="progress" id="bar"></div>
+
+<nav class="nav" id="nav">
+  <div class="wrap">
+    <a class="brand" href="#top"><i>聯</i>聯成電腦 暫時性職缺</a>
+    <ul>
+      <li><a href="#jobs">職缺總覽</a></li>
+      <li><a href="#benefits">福利</a></li>
+      <li><a href="#process">應徵流程</a></li>
+      <li><a href="#faq">常見問題</a></li>
+      <li><a href="#apply">聯絡我們</a></li>
+    </ul>
+    <a class="call" href="#apply">立即應徵</a>
+  </div>
+</nav>
+
+<main id="content">
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow"><b></b>誠徵中・免面試・多數可轉正</div>
+      <h1>暫時性職缺<br><em>高薪・免輪班</em><span class="sub">週休二日・免費供餐・可週預支</span></h1>
+      <p class="lead">食品、生技醫材、機場貴賓室、空廚、冷氣與汽車零件組裝，以及物流倉儲等多元職缺同步招募。班別可選，無經驗也歡迎。</p>
+      <div class="tools-inline">
+        <span class="chip k">9 個職缺</span>
+        <span class="chip">班別可自選</span>
+        <span class="chip">可日領・週預支</span>
+        <span class="chip">提供宿舍／交通車</span>
+      </div>
+      <div class="cta">
+        <a class="btn p" href="#jobs">查看職缺</a>
+        <a class="btn g" href="#apply">如何應徵</a>
+      </div>
+    </div>
+
+    <aside class="hero-card" id="heroCard">
+      <div class="poster">
+        <div class="badges"><span>熱門</span><span>免輪班</span></div>
+        <strong>240</strong>
+        <small>最高時薪（元／小時）・月薪最高 73K</small>
+      </div>
+      <div class="facts">
+        <div><small>職缺數</small><strong>9 個</strong></div>
+        <div><small>地區</small><strong>桃園為主</strong></div>
+        <div><small>休假</small><strong>週休二日／排休</strong></div>
+        <div><small>領薪</small><strong>可日領・週預支</strong></div>
+      </div>
+      <div class="countdown">
+        <small>職缺更新日</small>
+        <span class="n num">2026/10/30</span>
+      </div>
+    </aside>
+  </div>
+</header>
+
+<div class="marquee" aria-hidden="true">
+  <div class="track" id="mq"><span>免輪班</span><em>✦</em><span>可日領</span><em>✦</em><span>週預支</span><em>✦</em><span>週休二日</span><em>✦</em><span>免費供餐</span><em>✦</em><span>可轉正</span><em>✦</em><span>免面試</span><em>✦</em><span>提供宿舍</span><em>✦</em></div>
+</div>
+
+<section id="jobs" class="alt">
+  <div class="wrap">
+    <div class="sh">
+      <div class="kicker">Open Positions</div>
+      <h2>職缺總覽</h2>
+      <p>點選分類快速篩選。薪資、班別與地點以各職缺公告為準，詳情歡迎洽詢專員。</p>
+    </div>
+
+    <div class="tabs" id="tabs">
+      <button class="on" data-t="all">全部</button>
+      <button data-t="food">食品・生技</button>
+      <button data-t="catering">空廚・機場</button>
+      <button data-t="assembly">組裝・零件</button>
+      <button data-t="logistics">物流・倉儲</button>
+    </div>
+
+    <div class="grid g3 jobs">
+
+      <article class="card" data-cat="food">
+        <div class="cat">食品製造</div>
+        <h3>食品作業員</h3>
+        <div class="co">新豐食品大廠</div>
+        <div class="pay"><small>時薪</small>250–300 / H</div>
+        <p>另有獎金 10,000 元（久任獎金）</p>
+        <ul>
+          <li>早 08:00–16:30｜中 16:00–00:30｜夜 00:00–08:30</li>
+          <li>工作：前處理投料、包裝、裝箱</li>
+          <li>固定班・免費供餐・週休二日</li>
+        </ul>
+        <span class="loc">新竹市新豐鄉新和路</span>
+        <div class="apply"><a href="#apply">我要應徵</a></div>
+      </article>
+
+      <article class="card" data-cat="food">
+        <div class="cat">生技醫材</div>
+        <h3>生技醫材作業員（中班）</h3>
+        <div class="co">血糖試紙製程</div>
+        <div class="pay"><small>月薪</small>60K 起</div>
+        <p>加班費 261–430 元／小時</p>
+        <ul>
+          <li>中班 16:30～01:00（需配合加班）</li>
+          <li>部門津貼 2,000／月・全勤 1,000／月</li>
+          <li>固定中班・週休二日・可週預支</li>
+        </ul>
+        <span class="loc">桃園市大園區五青路</span>
+        <div class="apply"><a href="#apply">我要應徵</a></div>
+      </article>
+
+      <article class="card" data-cat="catering">
+        <div class="cat">機場貴賓室</div>
+        <h3>外場／房務／洗滌人員</h3>
+        <div class="co">桃園機場 T1／T2 貴賓室</div>
+        <div class="pay"><small>日薪</small>2,000 起</div>
+        <p>外場時薪 250 元（夜班 260 元）</p>
+        <ul>
+          <li>外場 05:00–14:00／15:00–24:00／23:00–08:00</li>
+          <li>房務、洗滌 07:00–16:00</li>
+          <li>排休制 8–11 天・提供制服・早 05 班與大夜班交通車</li>
+        </ul>
+        <span class="loc">桃園機場 T1／T2</span>
+        <div class="apply"><a href="#apply">我要應徵</a></div>
+      </article>
+
+      <article class="card" data-cat="catering">
+        <div class="cat">空廚</div>
+        <h3>長榮空廚 作業員（早班）</h3>
+        <div class="co">EVA AIR SKY KITCHEN</div>
+        <div class="pay"><small>月薪</small>37K 起</div>
+        <p>加班可達 50K</p>
+        <ul>
+          <li>08:00–16:30｜配餐、排餐（組裝機上套餐）</li>
+          <li>全空調廚房・服裝鞋子廠區提供</li>
+          <li>可月領／可週預支・排休制 8–10 天</li>
+        </ul>
+        <span class="loc">桃園市大園區航動北路</span>
+        <div class="apply"><a href="#apply">我要應徵</a></div>
+      </article>
+
+      <article class="card" data-cat="catering">
+        <div class="cat">空廚</div>
+        <h3>華膳空廚 作業員</h3>
+        <div class="co">HUASHAN AIR CATERING</div>
+        <div class="pay"><small>時薪</small>240 元</div>
+        <p>月薪約 42K–60K・可日領／週預支</p>
+        <ul>
+          <li>班別自選・免輪班（8 種時段）</li>
+          <li>配餐、排餐、餐具、庫房、肉房、蔬果</li>
+          <li>免費供餐・冷氣房・每週可預支 5,000–6,000</li>
+        </ul>
+        <span class="loc">桃園市蘆竹區海山路二段（近大園機場）</span>
+        <div class="apply"><a href="#apply">我要應徵</a></div>
+      </article>
+
+      <article class="card" data-cat="assembly">
+        <div class="cat">冷氣製造</div>
+        <h3>日立冷氣 組裝員</h3>
+        <div class="co">HITACHI</div>
+        <div class="pay"><small>月薪約</small>73K</div>
+        <p>底薪 38K｜加班前 2 小時 310／H、第 3 小時起 380／H</p>
+        <ul>
+          <li>07:30–16:10（配合加班）</li>
+          <li>獨家提供宿舍（包水電）・交通車免費搭乘</li>
+          <li>周休二日・見紅休・可周預支 5,000–6,000</li>
+        </ul>
+        <span class="loc">蘆竹區內溪路</span>
+        <div class="apply"><a href="#apply">我要應徵</a></div>
+      </article>
+
+      <article class="card" data-cat="assembly">
+        <div class="cat">汽車零件</div>
+        <h3>日商零件組裝作業員</h3>
+        <div class="co">免穿無塵衣・冷氣房</div>
+        <div class="pay"><small>時薪</small>210 元</div>
+        <p>月領約 36K–50K</p>
+        <ul>
+          <li>08:00–17:00（需配合加班）</li>
+          <li>汽車零件組裝、包裝等站別式作業</li>
+          <li>周休二日・免費供餐・專屬機車停車位</li>
+        </ul>
+        <span class="loc">桃園市蘆竹區長興路三段</span>
+        <div class="apply"><a href="#apply">我要應徵</a></div>
+      </article>
+
+      <article class="card" data-cat="logistics">
+        <div class="cat">物流・倉儲</div>
+        <h3>蝦皮優選 班別自選・廠區自選</h3>
+        <div class="co">楊梅倉・仁美倉・威獅倉・高鐵南倉・觀音倉</div>
+        <div class="pay"><small>日班時薪</small>215–245 / H</div>
+        <p>晚班 265–270／H・晚 8 班 280–290／H・夜班 280–325／H</p>
+        <ul>
+          <li>日班多時段、晚班 18:00–03:00、夜班 00:00–09:00</li>
+          <li>商品推物流箱揀貨、箱整理、補貨上架</li>
+          <li>可日領・週預支・月領・免汽機車位・可轉正</li>
+        </ul>
+        <span class="loc">桃園（五處倉庫）</span>
+        <div class="apply"><a href="#apply">我要應徵</a></div>
+      </article>
+
+      <article class="card" data-cat="food">
+        <div class="cat">科學園區</div>
+        <h3>操作員／工安人員</h3>
+        <div class="co">新竹科學園區</div>
+        <div class="pay"><small>月薪</small>35K／40K</div>
+        <p>操作員 35,000 元｜工安人員 40,000 元</p>
+        <ul>
+          <li>08:00–17:00・排休制 8 天</li>
+          <li>操作員：廚餘推車至機台，後續全自動處理</li>
+          <li>工安需職業安全衛生管理員執照；福利含三節、年終</li>
+        </ul>
+        <span class="loc">新竹科學園區</span>
+        <div class="apply"><a href="#apply">我要應徵</a></div>
+      </article>
+
+    </div>
+    <p class="note">※ 以上職缺的班別與薪資以公告為準，詳情請洽專員。</p>
+  </div>
+</section>
+
+<section id="benefits">
+  <div class="wrap">
+    <div class="sh">
+      <div class="kicker">Benefits</div>
+      <h2>共通福利制度</h2>
+      <p>多數職缺共同提供的福利，實際內容依各職缺公告為準。</p>
+    </div>
+    <div class="grid g4 benefits-grid">
+      <div class="card"><i>01</i><h3>勞健保・勞退</h3><p>勞保、健保、勞退提撥 6%，保障完整。</p></div>
+      <div class="card"><i>02</i><h3>團體保險</h3><p>多數職缺提供團保，工作期間更安心。</p></div>
+      <div class="card"><i>03</i><h3>三節禮金・特休</h3><p>三節禮金或禮品、特休假，節日有獎勵。</p></div>
+      <div class="card"><i>04</i><h3>免費供餐</h3><p>部分廠區與空廚提供免費餐點，省下餐費。</p></div>
+      <div class="card"><i>05</i><h3>周預支・日領</h3><p>多項職缺可日領或週預支，急用錢不煩惱。</p></div>
+      <div class="card"><i>06</i><h3>免輪班・班別自選</h3><p>部分職缺可自選班別、免輪班，作息好安排。</p></div>
+      <div class="card"><i>07</i><h3>交通與停車</h3><p>交通車、宿舍、免費汽機車停車位等多元選擇。</p></div>
+      <div class="card"><i>08</i><h3>轉正機會</h3><p>多個職缺表示可轉正，穩定發展有機會。</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="process" class="alt">
+  <div class="wrap">
+    <div class="sh">
+      <div class="kicker">How to Apply</div>
+      <h2>三步驟快速應徵</h2>
+      <p>完成初步應徵後，專員會與你聯繫確認班別、地點與到職時間。</p>
+    </div>
+    <ol class="journey">
+      <li><div class="dot">1</div><h3>截圖職缺</h3><p>選擇想應徵的職缺，截圖保存職缺資訊。</p></li>
+      <li><div class="dot">2</div><h3>提供資料</h3><p>將截圖連同「姓名＋電話」傳送給專員。</p></li>
+      <li><div class="dot">3</div><h3>等待聯繫</h3><p>專員會與你確認細節，安排後續作業。</p></li>
+    </ol>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="sh">
+      <div class="kicker">FAQ</div>
+      <h2>常見問題</h2>
+    </div>
+    <div class="faq">
+      <details><summary>需要有工作經驗嗎？</summary><p>多數職缺無經驗可，部分職缺有經驗更佳，專員會依職缺說明。</p></details>
+      <details><summary>薪資可以日領或週預支嗎？</summary><p>多數職缺提供日領或週預支，確切方式請以各職缺公告與專員說明為準。</p></details>
+      <details><summary>需要面試嗎？</summary><p>多數職缺標示免面試，實際流程以專員通知為準。</p></details>
+      <details><summary>班別可以自己選嗎？</summary><p>部分職缺（如空廚、蝦皮優選）提供班別自選或免輪班，其餘職缺為固定班別。</p></details>
+    </div>
+  </div>
+</section>
+
+<section id="apply" class="alt" style="padding-top:20px">
+  <div class="wrap">
+    <div class="signup">
+      <div>
+        <div class="kicker" style="color:#FFB27A">Apply Now</div>
+        <h2>準備好了嗎？現在就應徵</h2>
+        <p>截圖職缺 ＋【姓名 ＋ 電話】，加 LINE 或直接來電即可。名額有限，歡迎先行諮詢。</p>
+        <div class="rule"><b>提醒：</b>職缺資訊以實際公告為準，薪資與班別可能依需求調整。</div>
+      </div>
+      <div>
+        <div class="info">
+          <div><small>應徵方式</small><span>截圖職缺＋姓名＋電話</span></div>
+          <div><small>LINE 官方</small><span>@654egdtm</span></div>
+          <div><small>聯絡電話</small><span class="num">0972-650-522</span></div>
+          <div><small>聯絡人</small><span>熊專員</span></div>
+        </div>
+        <div class="contact">
+          <div>
+            <b>加入 LINE 或來電諮詢</b>
+            <p>電話號碼搜尋即可加 LINE</p>
+            <div class="row">
+              <a class="line" href="#" target="_blank" rel="noopener">LINE @654egdtm</a>
+              <a class="tel" href="tel:0972650522">📞 0972-650-522</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <b>聯成電腦</b>｜暫時性職缺・職缺以實際公告為準<br>
+    LINE @654egdtm｜電話 0972-650-522（熊專員）
+  </div>
+</footer>
+
+<button class="jump" id="jump" title="一鍵到底端">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+  <span>到底</span>
+</button>
+<button class="fab" id="fab">我要應徵</button>
+
+<div class="drawer" id="drawer">
+  <div class="bg" data-close></div>
+  <aside class="panel">
+    <button class="x" data-close aria-label="關閉">×</button>
+    <h3>快速應徵</h3>
+    <div class="pitch">截圖職缺 ＋【姓名 ＋ 電話】，即可完成初步應徵。</div>
+    <ol>
+      <li>截圖想應徵的職缺</li>
+      <li>傳送截圖與姓名、電話</li>
+      <li>等待專員與你聯繫</li>
+    </ol>
+    <a class="btn p" href="tel:0972650522">📞 撥打 0972-650-522</a>
+    <a class="btn b" href="#" target="_blank" rel="noopener">加入 LINE @654egdtm</a>
+  </aside>
+</div>
+
+<script>
+// marquee: duplicate for seamless loop
+(function(){ const t=document.getElementById("mq"); t.innerHTML += t.innerHTML; })();
+
+// job filter tabs
+document.querySelectorAll("#tabs button").forEach(b => b.addEventListener("click", () => {
+  document.querySelectorAll("#tabs button").forEach(x => x.classList.toggle("on", x===b));
+  document.querySelectorAll(".jobs .card").forEach(c => c.classList.toggle("hidden", b.dataset.t!=="all" && c.dataset.cat!==b.dataset.t));
+}));
+
+// drawer
+const dr=document.getElementById("drawer");
+document.getElementById("fab").onclick=()=>dr.classList.add("on");
+dr.querySelectorAll("[data-close]").forEach(e => e.addEventListener("click", () => dr.classList.remove("on")));
+document.addEventListener("keydown", e => { if (e.key==="Escape") dr.classList.remove("on"); });
+
+// pager: toggles between top and bottom
+(function(){
+  const btn=document.getElementById("jump"), path=btn.querySelector("path"), label=btn.querySelector("span");
+  const maxY=()=>document.documentElement.scrollHeight-window.innerHeight;
+  const atLower=()=>window.scrollY > maxY()/2;
+  function sync(){ const up=atLower(); path.setAttribute("d", up ? "m6 15 6-6 6 6" : "m6 9 6 6 6-6"); label.textContent = up ? "置頂" : "到底"; btn.title = up ? "一鍵置頂" : "一鍵到底端"; }
+  btn.onclick=()=>window.scrollTo({top: atLower() ? 0 : maxY(), behavior:"smooth"});
+  addEventListener("scroll", sync, {passive:true}); sync();
+})();
+
+// motion layer
+(function(){
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const root = document.documentElement;
+
+  // headline per-character reveal
+  const h1=document.querySelector('.hero h1');
+  if (h1 && !reduce) {
+    let i=0;
+    [...h1.childNodes].forEach(n => {
+      if (n.nodeType===3 || (n.nodeType===1 && n.tagName==='EM')) {
+        const frag=document.createDocumentFragment(), wrap=n.nodeType===1 ? n.cloneNode(false) : null;
+        [...n.textContent].forEach(c => { const s=document.createElement('span'); s.className='ch'; s.style.setProperty('--i', i++); s.textContent=c; (wrap||frag).appendChild(s); });
+        if (wrap) frag.appendChild(wrap);
+        n.replaceWith(frag);
+      }
+    });
+  }
+
+  // progress bar, nav hide, active link
+  const bar=document.getElementById('bar');
+  const nav=document.getElementById('nav');
+  const links=[...document.querySelectorAll('.nav ul a')];
+  const secs=links.map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+  let lastY=scrollY;
+  function onScroll(){
+    const max=root.scrollHeight-innerHeight;
+    bar.style.transform=`scaleX(${max>0 ? scrollY/max : 0})`;
+    nav.classList.toggle('hide', scrollY>lastY && scrollY>200);
+    lastY=scrollY;
+    let cur=null; secs.forEach(s => { if (s.getBoundingClientRect().top < innerHeight*.35) cur=s; });
+    links.forEach(a => a.classList.toggle('active', !!cur && a.getAttribute('href')==='#'+cur.id));
+  }
+  addEventListener('scroll', onScroll, {passive:true}); onScroll();
+
+  // scroll reveal for elements below the fold
+  if (!reduce && 'IntersectionObserver' in window) {
+    const sel=['.sh','.benefits-grid .card','.journey li','.faq details','.signup','.tabs','.jobs .card','.note'];
+    const items=[];
+    sel.forEach(s => document.querySelectorAll('main '+s).forEach(el => {
+      if (items.includes(el) || el.closest('.hero')) return;
+      if (el.getBoundingClientRect().top < innerHeight) return;
+      const sib=el.parentElement ? [...el.parentElement.children].indexOf(el) : 0;
+      el.style.setProperty('--d', Math.min(sib,6)*70+'ms');
+      el.classList.add('rv'); items.push(el);
+    }));
+    root.classList.add('js-anim');
+    const io=new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting || e.boundingClientRect.top<0) { e.target.classList.add('in'); io.unobserve(e.target); } }), {threshold:.12, rootMargin:'0px 0px -40px 0px'});
+    items.forEach(el => io.observe(el));
+  }
+
+  // hero card tilt
+  const hc=document.getElementById('heroCard');
+  if (hc && !reduce && matchMedia('(hover:hover)').matches) {
+    hc.addEventListener('mousemove', e => {
+      const r=hc.getBoundingClientRect(), x=(e.clientX-r.left)/r.width-.5, y=(e.clientY-r.top)/r.height-.5;
+      hc.style.transform=`perspective(900px) rotateY(${x*6}deg) rotateX(${-y*6}deg)`;
+    });
+    hc.addEventListener('mouseleave', () => { hc.style.transform=''; });
+  }
+})();
+</script>
+</body>
+</html>
